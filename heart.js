@@ -43,9 +43,9 @@ var init = function () {
     };
 
     var scaleFactorX = 80;
-    var scaleFactorY = 30;
+    var scaleFactorY = 35;
     var centerX = width / 2;
-    var centerY = height / 3;
+    var centerY = height / 2;
     
     var pointsOrigin = [];
     var dr = 0.2;
@@ -137,3 +137,4 @@ var init = function () {
 };
 
 document.addEventListener('DOMContentLoaded', init, false);
+
