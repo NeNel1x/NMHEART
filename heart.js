@@ -44,8 +44,8 @@ var init = function () {
 
     var scaleFactorX = 240; // Збільшив ширину вдвічі
     var scaleFactorY = 40;
-    var centerX = width / 3;
-    var centerY = height / 3;
+    var centerX = width / 2;
+    var centerY = height / 2;
     
     var pointsOrigin = [];
     var dr = 0.2;
