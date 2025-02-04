@@ -23,7 +23,7 @@ var loaded = false;
 
 var init = function () {
     if (loaded) return;
-    if (!window.isDevice) return; // Запускаємо тільки на мобільних пристроях
+    if (!window.isDevice) return;
     
     loaded = true;
     var canvas = document.getElementById('heart');
@@ -35,21 +35,22 @@ var init = function () {
     ctx.fillRect(0, 0, width, height);
 
     var heartPosition = function (rad) {
-        return [Math.pow(Math.sin(rad), 3), -(15 * Math.cos(rad) - 5 * Math.cos(2 * rad) - 2 * Math.cos(3 * rad) - Math.cos(4 * rad))];
+        return [Math.pow(Math.sin(rad), 3), -(10 * Math.cos(rad) - 4 * Math.cos(2 * rad) - 2 * Math.cos(3 * rad) - Math.cos(4 * rad))];
     };
     
     var scaleAndTranslate = function (pos, sx, sy, dx, dy) {
         return [dx + pos[0] * sx, dy + pos[1] * sy];
     };
 
-    var scaleFactor = 50; // Значно зменшив масштаб серця
+    var scaleFactorX = 60;
+    var scaleFactorY = 40;
     var centerX = width / 2;
-    var centerY = height / 2.5;
+    var centerY = height / 3;
     
     var pointsOrigin = [];
     var dr = 0.2;
     for (var i = 0; i < Math.PI * 2; i += dr) {
-        pointsOrigin.push(scaleAndTranslate(heartPosition(i), scaleFactor, scaleFactor, centerX, centerY));
+        pointsOrigin.push(scaleAndTranslate(heartPosition(i), scaleFactorX, scaleFactorY, centerX, centerY));
     }
     var heartPointsCount = pointsOrigin.length;
 
@@ -135,8 +136,4 @@ var init = function () {
     loop();
 };
 
-if (document.readyState === 'complete' || document.readyState === 'loaded' || document.readyState === 'interactive') {
-    init();
-} else {
-    document.addEventListener('DOMContentLoaded', init, false);
-}
+document.addEventListener('DOMContentLoaded', init, false);
