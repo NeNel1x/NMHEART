@@ -35,15 +35,15 @@ var init = function () {
     ctx.fillRect(0, 0, width, height);
 
     var heartPosition = function (rad) {
-        return [Math.pow(Math.sin(rad), 3), -(10 * Math.cos(rad) - 4 * Math.cos(2 * rad) - 2 * Math.cos(3 * rad) - Math.cos(4 * rad))];
+        return [Math.pow(Math.sin(rad), 3), -(8 * Math.cos(rad) - 3 * Math.cos(2 * rad) - 2 * Math.cos(3 * rad) - Math.cos(4 * rad))];
     };
     
     var scaleAndTranslate = function (pos, sx, sy, dx, dy) {
         return [dx + pos[0] * sx, dy + pos[1] * sy];
     };
 
-    var scaleFactorX = 60;
-    var scaleFactorY = 40;
+    var scaleFactorX = 80;
+    var scaleFactorY = 30;
     var centerX = width / 2;
     var centerY = height / 3;
     
