@@ -42,8 +42,8 @@ var init = function () {
         return [dx + pos[0] * sx, dy + pos[1] * sy];
     };
 
-    var scaleFactorX = 240; // Збільшив ширину вдвічі
-    var scaleFactorY = 40;
+    var scaleFactorX = 400; // Збільшив ширину вдвічі
+    var scaleFactorY = 100;
     var centerX = width / 2;
     var centerY = height / 3;
     
