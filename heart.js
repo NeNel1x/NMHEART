@@ -42,9 +42,9 @@ var init = function () {
         return [dx + pos[0] * sx, dy + pos[1] * sy];
     };
 
-    var scaleFactorX = 400; // Збільшив ширину вдвічі
-    var scaleFactorY = 100;
-    var centerX = width / 2;
+    var scaleFactorX = 720; // Збільшив ширину вдвічі
+    var scaleFactorY = 40;
+    var centerX = width / 4;
     var centerY = height / 3;
     
     var pointsOrigin = [];
